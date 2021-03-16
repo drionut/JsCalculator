@@ -75,7 +75,7 @@ main {
     color: white;
     border: 1px solid white;
 }
-.calculatorContainer > button.equals:hover {
+.calculatorContainer > button.equal:hover {
     background-color: turquoise;
     border: 1px solid white;
 }
