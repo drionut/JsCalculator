@@ -1,0 +1,133 @@
+/* little reset and some general rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body {
+    background: linear-gradient(white, #ccc);
+}
+
+.nav-link {
+    color: #d6aa94;
+    font-size: 14px;
+    font-family: "Dosis", sans-serif;
+    text-decoration: none;
+    border: 2px solid #ee4d4d;
+    border-radius: 5px;
+    box-shadow: 2px 2px 0 #f27c7c;
+    transition: background-color 0.3s ease;
+    padding: 5px 10px;
+    display: inline-block;
+    position: relative;
+    margin: 0 5px;
+}
+
+.nav-link:hover {
+    box-shadow: none;
+    top: 2px;
+    left: 2px;
+}
+/* -------- */
+
+main {
+    height: 100vh;
+}
+
+/* style for calculator section */
+
+#calculator {
+    padding-top: 20px;
+}
+
+.calculatorContainer {
+    margin: auto;
+    border: 1px solid black;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(4, 70px);
+    grid-template-rows: minmax(80px, auto) repeat(5, 70px);
+
+    word-break: break-all;
+    width: 282px;
+}
+.calculatorContainer > button {
+    cursor: pointer;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 1.6em;
+    background-color: rgba(255, 255, 255, 1);
+}
+.calculatorContainer > button:hover {
+    background-color: rgba(45, 41, 38, 0.2);
+    border: 1px solid black;
+}
+.calculatorContainer > button.allClear:hover {
+    background-color: #e94b3cff;
+    color: white;
+    border: 1px solid white;
+}
+.calculatorContainer > button.equals:hover {
+    background-color: turquoise;
+    border: 1px solid white;
+}
+
+#calculatorDisplay {
+    grid-column: 1/-1;
+    background-color: black;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 5px;
+}
+.spanTwo {
+    grid-column: span 2;
+}
+.operation {
+    color: rgb(255, 255, 255, 0.5);
+    font-size: 1.5em;
+    /* height: 16px; */
+    position: fixed;
+    top: 25px;
+}
+.result {
+    color: rgb(255, 255, 255, 1);
+    font-size: 2.4em;
+    height: auto;
+    margin-top: 20px;
+}
+
+.deleteButton {
+    background-image: url('./assets/icons8-clear-symbol-50.png');
+    /* background-size: cover; */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* footer style */
+footer {
+    position: absolute;
+    width: 100%;
+    background-color: #2b2e48;
+    padding: 10px;
+    height: 50px;
+    left: 0;
+    bottom: 0;
+    border-top: 1px solid black;
+}
+.footer-links {
+    width: 75%;
+    margin: auto;
+    text-align: center;
+}
+
+
